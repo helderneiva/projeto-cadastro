@@ -11,6 +11,23 @@
             font-weight: bolder;
         }
 
+        fieldset {
+        display: flex;
+        flex-direction: column;
+        padding-top: 15px;
+        margin-top: 50px;
+        width: 452px;
+        }
+
+        legend {
+        float: left;
+        display: block;
+        margin-bottom: 10px;
+        margin-top: -52px;
+        padding: 5px;
+        font-size: 20px;
+        }
+
         .campo{
             display: flex;
             align-items: center;
@@ -21,6 +38,11 @@
         .campo input{
             font-weight: normal;
             font-size: 15px;
+        }
+
+        #ifoto{
+            color: transparent;
+            width: 140px;
         }
 
         #enviar, #sair{
@@ -49,6 +71,7 @@
     <h1>Cadastre-se</h1>
     <form action="cadastro.php" autocomplete="on" method="post">
         <fieldset>
+            <legend>Dados do Usuário</legend>
             <div class="campo">
                 <label for="inome">Nome:</label>
                 <input type="text" name="nome" id="inome" placeholder="nome" size="20" required autocomplete="name">
@@ -68,7 +91,7 @@
                 </span>
 
                 <span class="sexo">
-                    <label for="ifem">Feminino</label>
+                    <label for="ifem">Feminino:</label>
                     <input type="radio" name="sexo" id="ifem" class="radio">
                 </span>
             </div>
@@ -84,7 +107,7 @@
             </div>
 
             <div class="campo">
-                <label for="ifoto">Foto do Perfil</label>
+                <label for="ifoto">Foto do Perfil:</label>
                 <input type="file" name="foto" id="ifoto" accept="image/*">
             </div>
                 
